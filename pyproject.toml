@@ -1,0 +1,27 @@
+[project]
+name = "flux-login"
+version = "0.1.0"
+description = "Demo Flux App login via api"
+readme = "README.md"
+authors = [
+    { name = "David White", email = "david@runonflux.io" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.11.18",
+    "python-bitcoinlib>=0.12.2",
+    "rich>=14.0.0",
+    "yarl>=1.20.0",
+]
+
+[project.scripts]
+flux-login = "flux_login:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.6",
+]
